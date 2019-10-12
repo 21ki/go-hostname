@@ -1,5 +1,5 @@
 // Simple program which prints the hostname of your webserver
-// And return code500 every 5 hits
+// And return code500 after 10 hits
 package main
 
 import (
@@ -38,7 +38,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 		log.Fatal(err)
 	}
 	c.incr()
-	if c.count%5 == 0 {
+	if c.count > 10 {
 		w.WriteHeader(http.StatusInternalServerError)
 	}
 	fmt.Fprintf(w, "The hostname is: "+hostname+"\n")

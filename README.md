@@ -1,6 +1,6 @@
 # Purpose
 Program written in GO which spins up a web server, it prints the hostname and
-returns a Code500 every 5 hits
+returns a Code500 after 10 hits
 
 #Usage
 To get source then compile it:
