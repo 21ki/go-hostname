@@ -41,7 +41,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 	if c.count > 10 {
 		w.WriteHeader(http.StatusInternalServerError)
 	}
-	fmt.Fprintf(w, "The hostname is: "+hostname+"\n")
+	fmt.Fprintf(w, "The hostname is: "+hostname+"\nThe Version is: V1\n")
 	fmt.Printf("Count: %v\n", c.count)
 }
 
