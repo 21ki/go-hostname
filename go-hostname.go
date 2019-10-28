@@ -38,10 +38,10 @@ func handler(w http.ResponseWriter, r *http.Request) {
 		log.Fatal(err)
 	}
 	c.incr()
-	if c.count > 5 {
-		w.WriteHeader(http.StatusInternalServerError)
-	}
-	fmt.Fprintf(w, "The hostname is: "+hostname+"\nThe Version is: V2\n")
+//	if c.count > 5 {
+//		w.WriteHeader(http.StatusInternalServerError)
+//	}
+	fmt.Fprintf(w, "The hostname is: "+hostname+"\nThe Version is: V1\n")
 	fmt.Printf("Count: %v\n", c.count)
 }
 
